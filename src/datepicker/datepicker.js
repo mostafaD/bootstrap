@@ -248,6 +248,7 @@ angular.module('ui.bootstrap.datepicker', ['ui.bootstrap.dateparser', 'ui.bootst
       }
 
       ctrl._refreshView = function() {
+		ctrl.activeDate = ctrl.activeDate? new Date(ctrl.activeDate): null;
         var year = ctrl.activeDate.getFullYear(),
           month = ctrl.activeDate.getMonth(),
           firstDayOfMonth = new Date(year, month, 1),
